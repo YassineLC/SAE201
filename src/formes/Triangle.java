@@ -1,6 +1,6 @@
 package formes;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import ardoise.*;
 
 public class Triangle extends Forme {
@@ -8,23 +8,30 @@ public class Triangle extends Forme {
 	private PointPlan p1 ;
 	private PointPlan p2 ;
 	private PointPlan p3 ;
+	private PointPlan[] lPoints ;
 	
 	public Triangle(PointPlan unP1, PointPlan unP2, PointPlan unP3) {
-		p1 = unP1 ;
-		p2 = unP2 ;
-		p3 = unP3 ;
+		
+		this.p1 = unP1 ;
+		this.p2 = unP2 ;
+		this.p3 = unP3 ;
+		
+		this.lPoints = new PointPlan[3];
+		
+		this.lPoints[0] = this.p1 ;
+		this.lPoints[1] = this.p2 ;
+		this.lPoints[2] = this.p3 ;
+		
+		
 	}
 	
 	@Override
 	public void deplacer(int arg0, int arg1) {
-		p1.setAbscisse(p1.getAbscisse() + arg0);
-		p1.setOrdonnee(p1.getOrdonnee() + arg1);
 		
-		p2.setAbscisse(p2.getAbscisse() + arg0);
-		p2.setOrdonnee(p2.getOrdonnee() + arg1);
-		
-		p3.setAbscisse(p3.getAbscisse() + arg0);
-		p3.setOrdonnee(p3.getOrdonnee() + arg1);
+		for (int i=0 ; i<this.lPoints.length; i++) {
+			this.lPoints[i].setAbscisse(this.lPoints[i].getAbscisse() + arg0);
+			this.lPoints[i].setOrdonnee(this.lPoints[i].getOrdonnee() + arg0);
+		}
 	}
 
 	@Override
