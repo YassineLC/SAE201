@@ -27,7 +27,7 @@ public class Chapeau extends Forme {
 	public void deplacer(int arg0, int arg1) {
 		for (int i=0 ; i<this.lPoints.length; i++) {
 			this.lPoints[i].setAbscisse(this.lPoints[i].getAbscisse() + arg0);
-			this.lPoints[i].setOrdonnee(this.lPoints[i].getOrdonnee() + arg0);
+			this.lPoints[i].setOrdonnee(this.lPoints[i].getOrdonnee() + arg1);
 		}
 	}
 

@@ -39,7 +39,15 @@ public class TestArdoise {
 		ardoise.ajouterForme(montagne2);
 		ardoise.ajouterForme(oiseau1);
 		
+		PointPlan t1 = new PointPlan(9, 100);
+		PointPlan t2 = new PointPlan(20, 100);
+		PointPlan t3 = new PointPlan(20, 198);
+		PointPlan t4 = new PointPlan(9, 198);
 		
+		Forme tour1 = new Quadrilatere(t1, t2, t3, t4);
+		tour1.dessiner();
+		
+		ardoise.ajouterForme(tour1);
 	}
 
 }
