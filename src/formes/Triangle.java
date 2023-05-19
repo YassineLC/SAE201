@@ -16,17 +16,16 @@ public class Triangle extends Forme {
 		this.p2 = unP2 ;
 		this.p3 = unP3 ;
 		
+	}
+	
+	@Override
+	public void deplacer(int arg0, int arg1) {
+		
 		this.lPoints = new PointPlan[3];
 		
 		this.lPoints[0] = this.p1 ;
 		this.lPoints[1] = this.p2 ;
 		this.lPoints[2] = this.p3 ;
-		
-		
-	}
-	
-	@Override
-	public void deplacer(int arg0, int arg1) {
 		
 		for (int i=0 ; i<this.lPoints.length; i++) {
 			this.lPoints[i].setAbscisse(this.lPoints[i].getAbscisse() + arg0);

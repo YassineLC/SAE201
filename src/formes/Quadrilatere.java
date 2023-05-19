@@ -9,12 +9,17 @@ public class Quadrilatere extends Forme {
 	private PointPlan p4;
 	private PointPlan[] Points;
 
-	public Quadrilatere(PointPlan unP1, PointPlan unP2, PointPlan unP3, PointPlan unP4)
+	public Quadrilatere(PointPlan unP1, PointPlan unP3)
 	{
 		this.p1 = unP1;
-		this.p2 = unP2;
+		this.p2 = new PointPlan(unP3.getAbscisse(), unP1.getOrdonnee());
 		this.p3 = unP3;
-		this.p4 = unP4;
+		this.p4 = new PointPlan(unP1.getAbscisse(), unP3.getOrdonnee());
+	}
+	@Override
+	public void deplacer(int arg0, int arg1) 
+	{
+		// TODO Auto-generated method stub
 		
 		this.Points = new PointPlan[4];
 		
@@ -23,11 +28,6 @@ public class Quadrilatere extends Forme {
 		this.Points[2] = this.p3 ;
 		this.Points[3] = this.p4 ;
 		
-	}
-	@Override
-	public void deplacer(int arg0, int arg1) 
-	{
-		// TODO Auto-generated method stub
 		for (int i=0 ; i<this.Points.length; i++) {
 			this.Points[i].setAbscisse(this.Points[i].getAbscisse() + arg0);
 			this.Points[i].setOrdonnee(this.Points[i].getOrdonnee() + arg1);

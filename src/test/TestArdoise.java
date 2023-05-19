@@ -57,29 +57,23 @@ public class TestArdoise
 		
 		
 		PointPlan t1 = new PointPlan(9, 100);
-		PointPlan t2 = new PointPlan(20, 100);
 		PointPlan t3 = new PointPlan(20, 198);
-		PointPlan t4 = new PointPlan(9, 198);
 		
-		Forme tour1 = new Quadrilatere(t1, t2, t3, t4);
+		Forme tour1 = new Quadrilatere(t1,t3);
 		tour1.dessiner();
 		
 		ardoise.ajouterForme(tour1);
 		
 		PointPlan cm1 = new PointPlan(80, 140);
-		PointPlan cm2 = new PointPlan(180, 140);
 		PointPlan cm3 = new PointPlan(180, 198);
-		PointPlan cm4 = new PointPlan(80, 198);
 		
-		Forme corpsMaison1 = new Quadrilatere(cm1, cm2, cm3, cm4);
+		Forme corpsMaison1 = new Quadrilatere(cm1, cm3);
 		corpsMaison1.dessiner();
 		
 		PointPlan Pm1 = new PointPlan(120, 170);
-		PointPlan Pm2 = new PointPlan(140, 170);
 		PointPlan Pm3 = new PointPlan(140, 198);
-		PointPlan Pm4 = new PointPlan(120, 198);
 		
-		Forme porteMaison1 = new Quadrilatere(Pm1, Pm2, Pm3, Pm4);
+		Forme porteMaison1 = new Quadrilatere(Pm1, Pm3);
 		porteMaison1.dessiner();
 		
 		PointPlan tm1 = new PointPlan(80, 140);
