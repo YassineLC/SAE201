@@ -2,15 +2,17 @@ package formes;
 import java.util.ArrayList;
 import ardoise.*;
 
-public class Quadrilatere extends Forme {
+public class Quadrilatere extends Forme 
+{
 	private PointPlan p1;
 	private PointPlan p2;
 	private PointPlan p3;
 	private PointPlan p4;
 	private PointPlan[] Points;
 
-	public Quadrilatere(PointPlan unP1, PointPlan unP3)
+	public Quadrilatere(String unNom, PointPlan unP1, PointPlan unP3)
 	{
+		super(unNom);
 		this.p1 = unP1;
 		this.p2 = new PointPlan(unP3.getAbscisse(), unP1.getOrdonnee());
 		this.p3 = unP3;
@@ -55,7 +57,8 @@ public class Quadrilatere extends Forme {
 	}
 
 	@Override
-	public String typeForme() {
+	public String typeForme() 
+	{
 		return "Q";
 	}
 
