@@ -8,8 +8,18 @@ public class Chapeau extends Forme
 	private PointPlan p1 ;
 	private PointPlan p2 ;
 	private PointPlan p3 ;
-	private PointPlan[] lPoints ;
 	
+	
+	public Chapeau()
+	{
+	}
+	
+	public Chapeau(PointPlan unP1, PointPlan unP2, PointPlan unP3) 
+	{
+		this.p1 = unP1 ;
+		this.p2 = unP2 ;
+		this.p3 = unP3 ;
+	}
 	
 	public Chapeau(String unNom, PointPlan unP1, PointPlan unP2, PointPlan unP3) 
 	{
@@ -19,19 +29,27 @@ public class Chapeau extends Forme
 		this.p3 = unP3 ;
 	}
 	
-	@Override
+	public Chapeau(Chapeau c)
+	{
+		super(c.getNomForme()) ;
+		this.p1 = new PointPlan(c.p1.getAbscisse(), c.p1.getOrdonnee()) ;
+		this.p2 = new PointPlan(c.p2.getAbscisse(), c.p2.getOrdonnee()) ;
+		this.p3 = new PointPlan(c.p3.getAbscisse(), c.p3.getOrdonnee()) ;
+	}
+	
+
 	public void deplacer(int arg0, int arg1)
 	{
-		this.lPoints = new PointPlan[3];
+		PointPlan[] lPoints = new PointPlan[3];
 		
-		this.lPoints[0] = this.p1 ;
-		this.lPoints[1] = this.p2 ;
-		this.lPoints[2] = this.p3 ;
+		lPoints[0] = p1 ;
+		lPoints[1] = p2 ;
+		lPoints[2] = p3 ;
 		
-		for (int i=0 ; i<this.lPoints.length; i++) 
+		for (int i=0 ; i<lPoints.length; i++) 
 		{
-			this.lPoints[i].setAbscisse(this.lPoints[i].getAbscisse() + arg0);
-			this.lPoints[i].setOrdonnee(this.lPoints[i].getOrdonnee() + arg1);
+			lPoints[i].setAbscisse(lPoints[i].getAbscisse() + arg0);
+			lPoints[i].setOrdonnee(lPoints[i].getOrdonnee() + arg1);
 		}
 	}
 

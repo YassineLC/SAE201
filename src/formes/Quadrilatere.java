@@ -8,8 +8,19 @@ public class Quadrilatere extends Forme
 	private PointPlan p2;
 	private PointPlan p3;
 	private PointPlan p4;
-	private PointPlan[] Points;
 
+	public Quadrilatere()
+	{
+	}
+	
+	public Quadrilatere(PointPlan unP1, PointPlan unP3) 
+	{
+		this.p1 = unP1;
+		this.p2 = new PointPlan(unP3.getAbscisse(), unP1.getOrdonnee());
+		this.p3 = unP3;
+		this.p4 = new PointPlan(unP1.getAbscisse(), unP3.getOrdonnee());
+	}
+	
 	public Quadrilatere(String unNom, PointPlan unP1, PointPlan unP3)
 	{
 		super(unNom);
@@ -18,21 +29,29 @@ public class Quadrilatere extends Forme
 		this.p3 = unP3;
 		this.p4 = new PointPlan(unP1.getAbscisse(), unP3.getOrdonnee());
 	}
-	@Override
+	
+	public Quadrilatere(Quadrilatere q)
+	{
+		super(q.getNomForme()) ;
+		this.p1 = new PointPlan(q.p1.getAbscisse(), q.p1.getOrdonnee()) ;
+		this.p2 = new PointPlan(q.p2.getAbscisse(), q.p2.getOrdonnee()) ;
+		this.p3 = new PointPlan(q.p3.getAbscisse(), q.p3.getOrdonnee()) ;
+		this.p4 = new PointPlan(q.p4.getAbscisse(), q.p4.getOrdonnee()) ;
+	}
+	
 	public void deplacer(int arg0, int arg1) 
 	{
-		// TODO Auto-generated method stub
 		
-		this.Points = new PointPlan[4];
+		PointPlan[] lPoints = new PointPlan[4];
 		
-		this.Points[0] = this.p1 ;
-		this.Points[1] = this.p2 ;
-		this.Points[2] = this.p3 ;
-		this.Points[3] = this.p4 ;
+		lPoints[0] = p1 ;
+		lPoints[1] = p2 ;
+		lPoints[2] = p3 ;
+		lPoints[3] = p4 ;
 		
-		for (int i=0 ; i<this.Points.length; i++) {
-			this.Points[i].setAbscisse(this.Points[i].getAbscisse() + arg0);
-			this.Points[i].setOrdonnee(this.Points[i].getOrdonnee() + arg1);
+		for (int i=0 ; i<lPoints.length; i++) {
+			lPoints[i].setAbscisse(lPoints[i].getAbscisse() + arg0);
+			lPoints[i].setOrdonnee(lPoints[i].getOrdonnee() + arg1);
 		}
 	}
 

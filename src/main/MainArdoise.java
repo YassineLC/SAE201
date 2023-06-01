@@ -1,9 +1,9 @@
-package test;
+package main;
 
 import ardoise.*;
 import formes.*;
 
-public class TestArdoise 
+public class MainArdoise 
 {
 
 	public static void main(String[] args) throws InterruptedException
