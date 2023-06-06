@@ -58,7 +58,6 @@ public class Quadrilatere extends Forme
 	@Override
 	public ArrayList<Segment> dessiner() 
 	{
-		// TODO Auto-generated method stub
 		Segment s1 = new Segment(this.p1, this.p2);
 		Segment s2 = new Segment(this.p2, this.p3);
 		Segment s3 = new Segment(this.p3, this.p4);
@@ -75,7 +74,6 @@ public class Quadrilatere extends Forme
 		return Seg;
 	}
 
-	@Override
 	public String typeForme() 
 	{
 		return "Q";

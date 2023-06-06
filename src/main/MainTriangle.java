@@ -1,9 +1,9 @@
-package test;
+package main;
 
 import ardoise.*;
 import formes.Triangle;
 
-public class TestTriangle {
+public class MainTriangle {
 	public static void main(String[] args)
 	{
 		Ardoise ardoise = new Ardoise();
@@ -18,10 +18,6 @@ public class TestTriangle {
 		
 		ardoise.ajouterForme(montagne1);
 		
-		Forme montagne2 = new Triangle(montagne1);
-		montagne2.deplacer(50, 50);
-		montagne2.dessiner();
-		
-		ardoise.ajouterForme(montagne2);
+		System.out.println(montagne1.dessiner());
 	}
 }

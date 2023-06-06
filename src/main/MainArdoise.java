@@ -66,19 +66,14 @@ public class MainArdoise
 		tour1.dessiner();
 		ardoise.ajouterForme(tour1);
 		
-		PointPlan cm1 = new PointPlan(80, 140);
-		PointPlan cm3 = new PointPlan(180, 198);
-			
-		PointPlan Pm1 = new PointPlan(120, 170);
-		PointPlan Pm3 = new PointPlan(140, 198);
 		
-		PointPlan tm1 = new PointPlan(80, 140);
-		PointPlan tm2 = new PointPlan(130, 100);
-		PointPlan tm3 = new PointPlan(180, 140);
+		PointPlan pmaison1 = new PointPlan(80, 140);
+		PointPlan pmaison3 = new PointPlan(180, 198);
 		
-		Forme Maison1 = new Maison("Maison1", cm1, cm3, Pm1, Pm3, tm1, tm2, tm3);
-		Maison1.dessiner();
-		ardoise.ajouterForme(Maison1);
+		Forme maison = new Maison(pmaison1, pmaison3);
+		maison.dessiner();
+		ardoise.ajouterForme(maison);
+		
 		
 		PointPlan pe1 = new PointPlan(170, 52);
 		PointPlan pe2 = new PointPlan(173, 45);
@@ -98,7 +93,7 @@ public class MainArdoise
 		PointPlan eb2 = new PointPlan(174, 66);
 		PointPlan eb3 = new PointPlan(170, 60);
 		
-		Forme branche3 = new Chapeau("Branceh3", eb1, eb2, eb3);
+		Forme branche3 = new Chapeau("Branche3", eb1, eb2, eb3);
 		branche3.dessiner();
 		
 		PointPlan b1 = new PointPlan(170, 60);
