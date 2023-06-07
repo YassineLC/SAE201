@@ -75,37 +75,13 @@ public class MainArdoise
 		ardoise.ajouterForme(maison);
 		
 		
-		PointPlan pe1 = new PointPlan(170, 52);
-		PointPlan pe2 = new PointPlan(173, 45);
-		PointPlan pe3 = new PointPlan(177, 52);
-		
-		Forme branche1 = new Chapeau("Branche1", pe1, pe2, pe3);
-		branche1.dessiner();
-		
-		PointPlan e1 = new PointPlan(177, 52);
+		PointPlan e1 = new PointPlan(173, 45);
 		PointPlan e2 = new PointPlan(184, 57);
-		PointPlan e3 = new PointPlan(177, 60);
+		PointPlan e3 = new PointPlan(174, 66);
+		PointPlan e4 = new PointPlan(164, 57);
 		
-		Forme branche2 = new Chapeau("Branche2", e1, e2, e3);
-		branche2.dessiner();
-		
-		PointPlan eb1 = new PointPlan(177, 60);
-		PointPlan eb2 = new PointPlan(174, 66);
-		PointPlan eb3 = new PointPlan(170, 60);
-		
-		Forme branche3 = new Chapeau("Branche3", eb1, eb2, eb3);
-		branche3.dessiner();
-		
-		PointPlan b1 = new PointPlan(170, 60);
-		PointPlan b2 = new PointPlan(164, 57);
-		PointPlan b3 = new PointPlan(170, 52);
-		
-		Forme branche4 = new Chapeau("Branche4", b1, b2, b3);
-		branche4.dessiner();
-		
-		ardoise.ajouterForme(branche1);
-		ardoise.ajouterForme(branche2);
-		ardoise.ajouterForme(branche3);
-		ardoise.ajouterForme(branche4);
+		Forme etoile = new Etoile("Etoile",e1,e2,e3,e4);
+		etoile.dessiner();
+		ardoise.ajouterForme(etoile);
 	}
 }

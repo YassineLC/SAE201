@@ -1,6 +1,6 @@
 package main;
 import ardoise.*;
-import formes.*;
+import formes.Maison;
 
 
 public class MainMaison {
@@ -17,20 +17,11 @@ public class MainMaison {
 		ardoise.ajouterForme(maison);
 		
 		
-		PointPlan e1 = new PointPlan(173, 45);
-		PointPlan e2 = new PointPlan(184, 57);
-		PointPlan e3 = new PointPlan(174, 66);
-		PointPlan e4 = new PointPlan(164, 57);
-		
-		Etoile etoile = new Etoile("Etoile", e1, e2, e3, e4);
-		etoile.dessiner();
-		ardoise.ajouterForme(etoile);
-		
-		Etoile et = new Etoile(etoile);
-		et.dessiner();
-		ardoise.ajouterForme(et);
-		
-		et.deplacer(-20, -20);
+		Maison maison_c = (Maison) maison;
+		Forme maison2 = new Maison(maison_c);
+		maison2.dessiner();
+		ardoise.ajouterForme(maison2);
+		maison2.deplacer(-70, -90);
 		
 	}
 	
