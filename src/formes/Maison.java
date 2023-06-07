@@ -1,10 +1,7 @@
 package formes;
 
 import java.util.ArrayList;
-
-import ardoise.Forme;
-import ardoise.PointPlan;
-import ardoise.Segment;
+import ardoise.*;
 
 public class Maison extends Forme {
 	
