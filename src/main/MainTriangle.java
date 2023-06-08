@@ -17,7 +17,5 @@ public class MainTriangle {
 		montagne1.dessiner();
 		
 		ardoise.ajouterForme(montagne1);
-		
-		System.out.println(montagne1.dessiner());
 	}
 }

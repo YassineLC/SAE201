@@ -84,7 +84,7 @@ public class Maison extends Forme {
 		
 		return Seg;
 	}
-
+	
 	public String typeForme() {
 		return "GF";
 	}

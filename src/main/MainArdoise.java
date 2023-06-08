@@ -83,5 +83,9 @@ public class MainArdoise
 		Forme etoile = new Etoile("Etoile",e1,e2,e3,e4);
 		etoile.dessiner();
 		ardoise.ajouterForme(etoile);
+		System.out.println("aaaaa");
+		System.out.println(etoile.dessiner().get(0));
+		System.out.println("aaaaa");
+		etoile.deplacer(-50,  10);
 	}
 }
