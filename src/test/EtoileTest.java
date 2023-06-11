@@ -21,6 +21,8 @@ public class EtoileTest
     	Forme etoile1 = new Etoile();
     	Forme etoile2 = new Etoile("Etoile",e1,e2,e3,e4);
     	Forme etoile3 = new Etoile(e1,e2,e3,e4);
+    	Etoile e_cast = (Etoile) etoile3;
+    	Forme etoile4 = new Etoile(e_cast);
     	
     	ardoise.ajouterForme(etoile1);
         ardoise.ajouterForme(etoile2);
@@ -32,6 +34,9 @@ public class EtoileTest
         
         assertEquals("GF", etoile2.typeForme());
         assertNotEquals(etoile2, etoile3);
-        assertEquals(etoile2.dessiner().get(0).getPointDepart(), e1);
-	}
+        PointPlan e5 = new PointPlan(175,53);
+        PointPlan e6 = new PointPlan(178,46);
+        Segment seg = new Segment(e5,e6);
+        assertNotEquals(etoile2.dessiner().get(0), seg);
+    }
 }

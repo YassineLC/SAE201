@@ -12,7 +12,6 @@ public class ChapeauTest
 	public void testOiseau() 
 	{
 		Ardoise ardoise = new Ardoise();
-		ardoise.dessinerGraphique();
        
 		PointPlan po1 = new PointPlan(118, 13);
         PointPlan po2 = new PointPlan(123, 20);

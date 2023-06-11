@@ -42,14 +42,13 @@ public class Chapeau extends Forme
 	{
 		PointPlan[] lPoints = new PointPlan[3];
 		
-		lPoints[0] = p1 ;
-		lPoints[1] = p2 ;
-		lPoints[2] = p3 ;
+		lPoints[0] = this.p1 ;
+		lPoints[1] = this.p2 ;
+		lPoints[2] = this.p3 ;
 		
 		for (int i=0 ; i<lPoints.length; i++) 
 		{
-			lPoints[i].setAbscisse(lPoints[i].getAbscisse() + arg0);
-			lPoints[i].setOrdonnee(lPoints[i].getOrdonnee() + arg1);
+			lPoints[i].deplacer(arg0, arg1);
 		}
 	}
 

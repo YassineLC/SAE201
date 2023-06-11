@@ -12,7 +12,6 @@ public class TriangleTest
 	public void testMontagne() 
 	{
 		Ardoise ardoise = new Ardoise();
-		ardoise.dessinerGraphique();
 		
 	    PointPlan m1 = new PointPlan(3,14);
 	    PointPlan m2 = new PointPlan(43,3);

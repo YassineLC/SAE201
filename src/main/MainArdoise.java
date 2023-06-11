@@ -2,6 +2,7 @@ package main;
 
 import ardoise.*;
 import formes.*;
+import java.lang.Thread;
 
 public class MainArdoise 
 {
@@ -87,5 +88,10 @@ public class MainArdoise
 		System.out.println(etoile.dessiner().get(0));
 		System.out.println("aaaaa");
 		etoile.deplacer(-50,  10);
+		
+		
+		Thread.sleep(1000);
+		ardoise.deplacer("C", 10, 20);
+
 	}
 }

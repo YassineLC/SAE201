@@ -50,8 +50,7 @@ public class Quadrilatere extends Forme
 		lPoints[3] = p4 ;
 		
 		for (int i=0 ; i<lPoints.length; i++) {
-			lPoints[i].setAbscisse(lPoints[i].getAbscisse() + arg0);
-			lPoints[i].setOrdonnee(lPoints[i].getOrdonnee() + arg1);
+			lPoints[i].deplacer(arg0, arg1);
 		}
 	}
 

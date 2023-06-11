@@ -12,7 +12,6 @@ public class QuadrilatereTest
 	public void testTour() 
 	{
 		Ardoise ardoise = new Ardoise();
-		ardoise.dessinerGraphique();
 		
 		PointPlan cm1 = new PointPlan(80, 140);
 		PointPlan cm3 = new PointPlan(180, 198);
@@ -23,6 +22,8 @@ public class QuadrilatereTest
 		
 		Quadrilatere q = (Quadrilatere) corpsMaison2;
 	    Forme corpsMaison4 = new Quadrilatere(q);
+	    
+	    Quadrilatere q2 = new Quadrilatere();
         
 		ardoise.ajouterForme(corpsMaison1);
         ardoise.ajouterForme(corpsMaison2);

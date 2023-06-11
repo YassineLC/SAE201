@@ -12,7 +12,6 @@ public class MaisonTest
     public void testMaison() 
     {
     	Ardoise ardoise = new Ardoise();
-		ardoise.dessinerGraphique();
 		
 		PointPlan cm1 = new PointPlan(80, 140);
 		PointPlan cm3 = new PointPlan(180, 198);
