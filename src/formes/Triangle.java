@@ -13,7 +13,7 @@ public class Triangle extends Forme
 	{
 	}
 	
-	public Triangle(PointPlan unP1, PointPlan unP2, PointPlan unP3) 
+	public Triangle(PointPlan unP1, PointPlan unP2, PointPlan unP3)
 	{
 		this.p1 = unP1 ;
 		this.p2 = unP2 ;
