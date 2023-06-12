@@ -27,7 +27,6 @@ public class EtoileTest
     	ardoise.ajouterForme(etoile1);
         ardoise.ajouterForme(etoile2);
         ardoise.ajouterForme(etoile3);
-        ardoise.dessinerGraphique();
         
         etoile2.dessiner();
         etoile2.deplacer(5, 1);
