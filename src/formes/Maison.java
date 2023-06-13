@@ -2,6 +2,7 @@ package formes;
 
 import java.util.ArrayList;
 
+import ardoise.Ardoise;
 import ardoise.Forme;
 import ardoise.PointPlan;
 import ardoise.Segment;
@@ -19,7 +20,8 @@ public class Maison extends Forme {
 	{
 	}
 	
-	public Maison(PointPlan p1_corps, PointPlan p3_corps) {
+	public Maison(PointPlan p1_corps, PointPlan p3_corps) 
+	{
 		this.p1 = p1_corps;
 		PointPlan p2_corps = new PointPlan(p3_corps.getAbscisse(), p1_corps.getOrdonnee());
 		this.p3 = p3_corps;
@@ -36,7 +38,8 @@ public class Maison extends Forme {
 		
 	}
 	
-	public Maison(String unNom, PointPlan p1_corps, PointPlan p3_corps) {
+	public Maison(String unNom, PointPlan p1_corps, PointPlan p3_corps) 
+	{
 		super(unNom);
 		this.p1 = p1_corps;
 		PointPlan p2_corps = new PointPlan(p3_corps.getAbscisse(), p1_corps.getOrdonnee());
@@ -61,31 +64,41 @@ public class Maison extends Forme {
 		this.toit = new Chapeau(m.toit);
 	}
 
-	public void deplacer(int arg0, int arg1) {
+	public void deplacer(int arg0, int arg1) 
+	{
+		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
+		{
+			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+		}
 		toit.deplacer(arg0, arg1);
 		corps.deplacer(arg0, arg1);
 		porte.deplacer(arg0, arg1);
 	}
 
-	public ArrayList<Segment> dessiner() {
+	public ArrayList<Segment> dessiner() 
+	{
 		ArrayList<Segment> Seg = new ArrayList<Segment>();
 		
-		for(int i=0; i<this.corps.dessiner().size(); i++) {
+		for(int i=0; i<this.corps.dessiner().size(); i++) 
+		{
 			Seg.add(this.corps.dessiner().get(i));
 		}
 		
-		for(int i=0; i<this.toit.dessiner().size(); i++) {
+		for(int i=0; i<this.toit.dessiner().size(); i++) 
+		{
 			Seg.add(this.toit.dessiner().get(i));
 		}
 		
-		for(int i=0; i<this.porte.dessiner().size(); i++) {
+		for(int i=0; i<this.porte.dessiner().size(); i++) 
+		{
 			Seg.add(this.porte.dessiner().get(i));
 		}
 		
 		return Seg;
 	}
 	
-	public String typeForme() {
+	public String typeForme() 
+	{
 		return "GF";
 	}
 

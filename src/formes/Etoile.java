@@ -3,7 +3,8 @@ package formes;
 import java.util.ArrayList;
 import ardoise.*;
 
-public class Etoile extends Forme {
+public class Etoile extends Forme 
+{
 	
 	private PointPlan p1;
 	private PointPlan p2;
@@ -77,14 +78,20 @@ public class Etoile extends Forme {
 	}
 	
 	
-	public void deplacer(int arg0, int arg1) {
+	public void deplacer(int arg0, int arg1) 
+	{
+		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
+		{
+			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+		}
 		this.c1.deplacer(arg0, arg1);
 		this.c2.deplacer(arg0, arg1);
 		this.c3.deplacer(arg0, arg1);
 		this.c4.deplacer(arg0, arg1);
 	}
 
-	public ArrayList<Segment> dessiner() {
+	public ArrayList<Segment> dessiner() 
+	{
 		ArrayList<Segment> Seg = new ArrayList<Segment>();
 		Chapeau[] lChap = new Chapeau[4];
 		
@@ -94,14 +101,16 @@ public class Etoile extends Forme {
 		lChap[3] = this.c4;
 		
 		for(int i=0; i<lChap.length; i++) {
-			for(int j=0; j<lChap[i].dessiner().size(); j++) {
+			for(int j=0; j<lChap[i].dessiner().size(); j++) 
+			{
 				Seg.add(lChap[i].dessiner().get(j));
 			}
 		}
 		return Seg;
 	}
 
-	public String typeForme() {
+	public String typeForme() 
+	{
 		return "GF";
 	}
 

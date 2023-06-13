@@ -29,9 +29,9 @@ public class ChapeauTest
         ardoise.ajouterForme(oiseau3);
         ardoise.ajouterForme(oiseau4);
         
+        oiseau2.deplacer(5, 5);
         oiseau1.dessiner();
         oiseau2.dessiner();
-        oiseau2.deplacer(5, 1);
         
         assertEquals("C", oiseau1.typeForme());
         assertEquals(oiseau2.dessiner().get(0).getPointDepart(), po1);

@@ -41,6 +41,10 @@ public class Quadrilatere extends Forme
 	
 	public void deplacer(int arg0, int arg1) 
 	{
+		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
+		{
+			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+		}
 		
 		PointPlan[] lPoints = new PointPlan[4];
 		
@@ -49,8 +53,16 @@ public class Quadrilatere extends Forme
 		lPoints[2] = p3 ;
 		lPoints[3] = p4 ;
 		
-		for (int i=0 ; i<lPoints.length; i++) {
-			lPoints[i].deplacer(arg0, arg1);
+		for (int i=0 ; i<lPoints.length; i++) 
+		{
+			try 
+			{
+				lPoints[i].deplacer(arg0, arg1);
+			} 
+			catch (IllegalArgumentException e) 
+			{
+				System.out.println("Le point " + i + " n'a pas pu être déplacé.");
+			}
 		}
 	}
 

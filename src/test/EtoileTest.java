@@ -21,6 +21,7 @@ public class EtoileTest
     	Forme etoile1 = new Etoile();
     	Forme etoile2 = new Etoile("Etoile",e1,e2,e3,e4);
     	Forme etoile3 = new Etoile(e1,e2,e3,e4);
+    	
     	Etoile e_cast = (Etoile) etoile3;
     	Forme etoile4 = new Etoile(e_cast);
     	
