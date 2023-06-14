@@ -59,7 +59,6 @@ public class MainArdoise
 		ardoise.ajouterForme(oiseau2);
 		ardoise.ajouterForme(oiseau3);
 		
-		
 		PointPlan t1 = new PointPlan(9, 100);
 		PointPlan t3 = new PointPlan(20, 198);
 		
@@ -84,10 +83,6 @@ public class MainArdoise
 		Forme etoile = new Etoile("Etoile",e1,e2,e3,e4);
 		etoile.dessiner();
 		ardoise.ajouterForme(etoile);
-		System.out.println("aaaaa");
-		System.out.println(etoile.dessiner().get(0));
-		System.out.println("aaaaa");
-		etoile.deplacer(-50,  10);
 		
 		
 		Thread.sleep(1000);

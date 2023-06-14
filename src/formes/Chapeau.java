@@ -42,7 +42,7 @@ public class Chapeau extends Forme
 	{
 		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
 		{
-			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+			throw new IllegalArgumentException();
 		}
 		
 		PointPlan[] lPoints = new PointPlan[3];
@@ -53,19 +53,12 @@ public class Chapeau extends Forme
 		
 		for (int i=0 ; i<lPoints.length; i++) 
 		{
-			try 
-			{
 				lPoints[i].deplacer(arg0, arg1);
-			} 
-			catch (IllegalArgumentException e) 
-			{
-				System.out.println("Le point " + i + " n'a pas pu être déplacé.");
-			}
 		}
 	}
 
 	@Override
-	public ArrayList<Segment> dessiner() throws IllegalArgumentException
+	public ArrayList<Segment> dessiner() 
 	{
 		Segment s1 = new Segment(p1, p2);
 		Segment s2 = new Segment(p2, p3);

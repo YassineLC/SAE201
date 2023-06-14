@@ -68,8 +68,9 @@ public class Maison extends Forme {
 	{
 		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
 		{
-			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+			throw new IllegalArgumentException();
 		}
+		
 		toit.deplacer(arg0, arg1);
 		corps.deplacer(arg0, arg1);
 		porte.deplacer(arg0, arg1);

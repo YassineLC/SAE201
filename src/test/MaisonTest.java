@@ -34,5 +34,13 @@ public class MaisonTest
 		assertEquals("GF", maison1.typeForme());
 		assertEquals(maison2.dessiner().get(0).getPointDepart(), cm1);
 		assertNotEquals(maison2, maison3);
+		try 
+		{
+			maison3.deplacer(2010, 10);
+		} 
+		catch (IllegalArgumentException e) 
+		{
+			System.out.println("Le point " + maison3 + " n'a pas pu être déplacé.");
+		}
     }
 }

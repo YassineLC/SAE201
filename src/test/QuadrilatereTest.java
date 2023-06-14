@@ -37,5 +37,13 @@ public class QuadrilatereTest
         assertEquals("Q", corpsMaison1.typeForme());
         assertEquals(corpsMaison2.dessiner().get(0).getPointDepart(), cm1);
         assertNotEquals(corpsMaison2, corpsMaison3);
+        try 
+		{
+			corpsMaison3.deplacer(2010, 10);
+		} 
+		catch (IllegalArgumentException e) 
+		{
+			System.out.println("Le point " + corpsMaison3 + " n'a pas pu être déplacé.");
+		}
 	}
 }

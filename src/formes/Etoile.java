@@ -82,8 +82,9 @@ public class Etoile extends Forme
 	{
 		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
 		{
-			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+			throw new IllegalArgumentException();
 		}
+		
 		this.c1.deplacer(arg0, arg1);
 		this.c2.deplacer(arg0, arg1);
 		this.c3.deplacer(arg0, arg1);

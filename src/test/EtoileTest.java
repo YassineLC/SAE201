@@ -38,5 +38,14 @@ public class EtoileTest
         PointPlan e6 = new PointPlan(178,46);
         Segment seg = new Segment(e5,e6);
         assertNotEquals(etoile2.dessiner().get(0), seg);
+        
+        try 
+		{
+			etoile3.deplacer(2010, 10);
+		} 
+		catch (IllegalArgumentException e) 
+		{
+			System.out.println("Le point " + etoile3 + " n'a pas pu être déplacé.");
+		}
     }
 }

@@ -38,5 +38,14 @@ public class TriangleTest
 	    assertEquals("T", montagne2.typeForme());
 	    assertEquals(montagne2.dessiner().get(0).getPointDepart(), m1);
 	    assertNotEquals(montagne2, montagne3);
+	    
+	    try 
+		{
+			montagne3.deplacer(2010, 10);
+		} 
+		catch (IllegalArgumentException e) 
+		{
+			System.out.println("Le point " + montagne3 + " n'a pas pu être déplacé.");
+		}
 	}
 }

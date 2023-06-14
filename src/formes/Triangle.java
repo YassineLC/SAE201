@@ -41,8 +41,9 @@ public class Triangle extends Forme
 	{
 		if (arg0 > Ardoise.MAX_X || arg1 > Ardoise.MAX_Y || arg0 < Ardoise.MIN_X || arg1 < Ardoise.MIN_Y) 
 		{
-			throw new IllegalArgumentException("Les arguments doivent être compris entre 0 et 200.");
+			throw new IllegalArgumentException();
 		}
+		
 		PointPlan[] lPoints = new PointPlan[3];
 		
 		lPoints[0] = this.p1 ;
@@ -51,15 +52,8 @@ public class Triangle extends Forme
 		
 		for (int i=0 ; i<lPoints.length; i++) 
 		{
-			try 
-			{
-				lPoints[i].deplacer(arg0, arg1);
-			} 
-			catch (IllegalArgumentException e) 
-			{
-				System.out.println("Le point " + i + " n'a pas pu être déplacé.");
-			}
-		}
+			lPoints[i].deplacer(arg0, arg1);
+		} 
 	}
 
 	@Override

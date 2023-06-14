@@ -29,12 +29,22 @@ public class ChapeauTest
         ardoise.ajouterForme(oiseau3);
         ardoise.ajouterForme(oiseau4);
         
-        oiseau2.deplacer(5, 5);
+        oiseau2.deplacer(1, 5);
         oiseau1.dessiner();
         oiseau2.dessiner();
         
         assertEquals("C", oiseau1.typeForme());
         assertEquals(oiseau2.dessiner().get(0).getPointDepart(), po1);
         assertNotEquals(oiseau2, oiseau3);
+        
+		try 
+		{
+			oiseau3.deplacer(2010, 10);
+		} 
+		catch (IllegalArgumentException e) 
+		{
+			System.out.println("Le point " + oiseau3 + " n'a pas pu être déplacé.");
+		}
+        
 	}
 }
