@@ -36,11 +36,11 @@ public class MaisonTest
 		assertNotEquals(maison2, maison3);
 		try 
 		{
-			maison3.deplacer(2010, 10);
+			maison2.deplacer(2010, 10);
 		} 
 		catch (IllegalArgumentException e) 
 		{
-			System.out.println("Le point " + maison3 + " n'a pas pu être déplacé.");
+			System.out.println("Le point " + maison2 + " n'a pas pu être déplacé.");
 		}
     }
 }

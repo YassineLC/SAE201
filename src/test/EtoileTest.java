@@ -41,11 +41,11 @@ public class EtoileTest
         
         try 
 		{
-			etoile3.deplacer(2010, 10);
+			etoile2.deplacer(2010, 10);
 		} 
 		catch (IllegalArgumentException e) 
 		{
-			System.out.println("Le point " + etoile3 + " n'a pas pu être déplacé.");
+			System.out.println("Le point " + etoile2 + " n'a pas pu être déplacé.");
 		}
     }
 }

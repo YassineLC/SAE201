@@ -18,7 +18,7 @@ public class ChapeauTest
         PointPlan po3 = new PointPlan(128, 13);
         
         Forme oiseau1 = new Chapeau();
-        Forme oiseau2 = new Chapeau("Oiseau1", po1, po2, po3);
+        Forme oiseau2 = new Chapeau("Oiseau", po1, po2, po3);
         Forme oiseau3 = new Chapeau(po1, po2, po3);
    
         Chapeau c = (Chapeau) oiseau3;
@@ -39,11 +39,11 @@ public class ChapeauTest
         
 		try 
 		{
-			oiseau3.deplacer(2010, 10);
+			oiseau2.deplacer(2010, 10);
 		} 
 		catch (IllegalArgumentException e) 
 		{
-			System.out.println("Le point " + oiseau3 + " n'a pas pu être déplacé.");
+			System.out.println("Le point " + oiseau2 + " n'a pas pu être déplacé.");
 		}
         
 	}

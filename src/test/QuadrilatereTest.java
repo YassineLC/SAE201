@@ -17,7 +17,7 @@ public class QuadrilatereTest
 		PointPlan cm3 = new PointPlan(180, 198);
 
 		Forme corpsMaison1 = new Quadrilatere();
-		Forme corpsMaison2 = new Quadrilatere("Corps Maison 1", cm1, cm3);
+		Forme corpsMaison2 = new Quadrilatere("Corps Maison", cm1, cm3);
 		Forme corpsMaison3 = new Quadrilatere(cm1, cm3);
 		
 		Quadrilatere q = (Quadrilatere) corpsMaison2;
@@ -39,11 +39,11 @@ public class QuadrilatereTest
         assertNotEquals(corpsMaison2, corpsMaison3);
         try 
 		{
-			corpsMaison3.deplacer(2010, 10);
+			corpsMaison2.deplacer(2010, 10);
 		} 
 		catch (IllegalArgumentException e) 
 		{
-			System.out.println("Le point " + corpsMaison3 + " n'a pas pu être déplacé.");
+			System.out.println("Le point " + corpsMaison2 + " n'a pas pu être déplacé.");
 		}
 	}
 }

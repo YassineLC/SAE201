@@ -18,7 +18,7 @@ public class TriangleTest
 	    PointPlan m3 = new PointPlan(112, 14);
 	    
 	    Forme montagne1 = new Triangle();
-	    Forme montagne2 = new Triangle("montagne1", m1,m2,m3);
+	    Forme montagne2 = new Triangle("Montagne", m1,m2,m3);
 	    Forme montagne3 = new Triangle(m1, m2, m3);
 	    
 	    Triangle t = (Triangle) montagne3;
@@ -41,11 +41,11 @@ public class TriangleTest
 	    
 	    try 
 		{
-			montagne3.deplacer(2010, 10);
+			montagne2.deplacer(2010, 10);
 		} 
 		catch (IllegalArgumentException e) 
 		{
-			System.out.println("Le point " + montagne3 + " n'a pas pu être déplacé.");
+			System.out.println("Le point " + montagne2 + " n'a pas pu être déplacé.");
 		}
 	}
 }
